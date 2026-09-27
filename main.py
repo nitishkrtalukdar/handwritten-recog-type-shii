@@ -69,7 +69,7 @@ def main():
 
     print(f"\nWrote invoice as row {row_num} in {args.output}")
     if report.needs_review:
-        print("\n⚠ NEEDS REVIEW -- please double check this row:")
+        print("\n[!] NEEDS REVIEW -- please double check this row:")
         for reason in report.review_reasons:
             print(f"   - {reason}")
         sys.exit(2)  # non-zero exit so this is easy to catch in a batch script
