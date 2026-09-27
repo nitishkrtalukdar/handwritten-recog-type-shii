@@ -1,0 +1,232 @@
+{
+  "template_name": "Bharat Associates - Tax Invoice",
+  "description": "ROI template calibrated for this vendor's fixed invoice layout. Handwritten fields are OCR'd per-invoice with TrOCR. Printed/fixed fields (this vendor's own name/address/GSTIN/bank) are stored once as static_fields instead of being re-OCR'd every run, since they never change on this pre-printed stationery.",
+  "reference_image_size": {
+    "width": 903,
+    "height": 1319
+  },
+  "static_fields": {
+    "supplier_name": "BHARAT ASSOCIATES",
+    "supplier_address": "Shop No. 30A, Ground Floor, Central Market Extn., Rampuri, Ghaziabad (UP) 201011",
+    "supplier_gstin": "09GBVPS8212J1ZP",
+    "supplier_phone": "9871872582, 9873018181",
+    "bank_name": "PUNJAB & SIND BANK",
+    "bank_account_no": "09061100000527",
+    "bank_branch": "CHANDER NAGAR, GZB.",
+    "bank_ifsc": "PSIB0000906"
+  },
+  "regions": {
+    "buyer_name": {
+      "box": [
+        0.09967,
+        0.16831,
+        0.77519,
+        0.19333
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "buyer_address_l1": {
+      "box": [
+        0.09967,
+        0.19333,
+        0.77519,
+        0.21986
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "buyer_address_l2": {
+      "box": [
+        0.0,
+        0.21986,
+        0.77519,
+        0.25019
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "buyer_state": {
+      "box": [
+        0.03322,
+        0.25019,
+        0.27685,
+        0.27672
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "buyer_gstin": {
+      "box": [
+        0.36545,
+        0.25019,
+        0.77519,
+        0.27672
+      ],
+      "engine": "trocr",
+      "type": "gstin"
+    },
+    "invoice_no": {
+      "box": [
+        0.87486,
+        0.16679,
+        1.0,
+        0.19864
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "invoice_date": {
+      "box": [
+        0.81395,
+        0.19864,
+        1.0,
+        0.22745
+      ],
+      "engine": "trocr",
+      "type": "date"
+    },
+    "electronic_ref": {
+      "box": [
+        0.77519,
+        0.25398,
+        1.0,
+        0.28052
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "items_table": {
+      "box": [
+        0.03876,
+        0.34268,
+        1.0,
+        0.71645
+      ],
+      "engine": "trocr",
+      "type": "table",
+      "columns": {
+        "sno": [
+          0.0,
+          0.065
+        ],
+        "description": [
+          0.065,
+          0.57
+        ],
+        "hsn": [
+          0.57,
+          0.655
+        ],
+        "rate": [
+          0.655,
+          0.765
+        ],
+        "taxable_value": [
+          0.765,
+          1.0
+        ]
+      }
+    },
+    "amount_in_words": {
+      "box": [
+        0.09967,
+        0.72176,
+        1.0,
+        0.75815
+      ],
+      "engine": "trocr",
+      "type": "text"
+    },
+    "total_before_gst": {
+      "box": [
+        0.77519,
+        0.75436,
+        1.0,
+        0.78469
+      ],
+      "engine": "trocr",
+      "type": "amount"
+    },
+    "cgst_pct": {
+      "box": [
+        0.71982,
+        0.78469,
+        0.79181,
+        0.81122
+      ],
+      "engine": "trocr",
+      "type": "percent"
+    },
+    "cgst_amount": {
+      "box": [
+        0.79181,
+        0.78469,
+        1.0,
+        0.81122
+      ],
+      "engine": "trocr",
+      "type": "amount"
+    },
+    "sgst_pct": {
+      "box": [
+        0.71982,
+        0.81122,
+        0.79181,
+        0.83776
+      ],
+      "engine": "trocr",
+      "type": "percent"
+    },
+    "sgst_amount": {
+      "box": [
+        0.79181,
+        0.81122,
+        1.0,
+        0.83776
+      ],
+      "engine": "trocr",
+      "type": "amount"
+    },
+    "igst_pct": {
+      "box": [
+        0.71982,
+        0.83776,
+        0.79181,
+        0.86429
+      ],
+      "engine": "trocr",
+      "type": "percent"
+    },
+    "igst_amount": {
+      "box": [
+        0.79181,
+        0.83776,
+        1.0,
+        0.86429
+      ],
+      "engine": "trocr",
+      "type": "amount"
+    },
+    "total_after_tax": {
+      "box": [
+        0.77519,
+        0.86429,
+        1.0,
+        0.8931
+      ],
+      "engine": "trocr",
+      "type": "amount"
+    },
+    "reverse_charge_mark": {
+      "box": [
+        0.77519,
+        0.22593,
+        1.0,
+        0.25246
+      ],
+      "engine": "trocr",
+      "type": "text"
+    }
+  }
+}
